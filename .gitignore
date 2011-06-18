@@ -1,0 +1,11 @@
+.project
+builds
+coverage.db
+nextBuildNumber
+phpdoc
+clover
+clover.xml
+cpd.xml
+phpdoc
+phpunit.xml
+pmd.xml
