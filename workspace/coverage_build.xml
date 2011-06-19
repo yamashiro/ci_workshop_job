@@ -33,7 +33,7 @@
 
    <phpunit codecoverage="true">
      <formatter type="xml" outfile="${outputDir}/phpunit.xml"/>
-     <formatter type="clover" outfile="clover.xml"/>
+     <formatter type="clover" outfile="${outputDir}/clover.xml"/>
      <batchtest>
        <fileset dir="./phpfiles/">
          <include name="**/*Test.php"/>
@@ -42,7 +42,7 @@
    </phpunit>
 
    <coverage-report outfile="clover.xml">
-     <report todir="clover" />
+     <report todir="${outputDir}/clover" />
    </coverage-report>
 
  </target>
