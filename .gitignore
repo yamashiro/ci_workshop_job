@@ -12,3 +12,4 @@ cpd.xml
 phpdoc
 phpunit.xml
 pmd.xml
+pmd.html
