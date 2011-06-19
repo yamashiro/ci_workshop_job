@@ -2,6 +2,7 @@
 <project name="ci_workshop" basedir="." default="all">
 
   <property name="outputDir" value="."/>
+  <property name="pmdformat" value="html"/>
 
   <target name="phpcpd">
     <phpcpd minTokens="10">
@@ -18,8 +19,8 @@
       <fileset dir="./phpfiles">
         <exclude name="exclude.php"/>
       </fileset>
-      <formatter type="xml"
-                 outfile="${outputDir}/pmd.xml"/>
+      <formatter type="${pmdformat}"
+                 outfile="${outputDir}/pmd.${pmdformat}"/>
     </phpmd>
   </target>
 

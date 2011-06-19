@@ -16,7 +16,9 @@
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
-    <hudson.plugins.phing.PhingBuilder/>
+    <hudson.plugins.phing.PhingBuilder>
+      <properties>pmdformat=xml</properties>
+    </hudson.plugins.phing.PhingBuilder>
   </builders>
   <publishers>
     <hudson.plugins.pmd.PmdPublisher>

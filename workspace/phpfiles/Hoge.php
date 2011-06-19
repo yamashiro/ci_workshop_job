@@ -12,6 +12,12 @@ class Hoge {
 	}
 
 	function complexMethod($array) {
+		$val = $this->foreachMethod($array);
+		if (true) { while (false) { if (true) {} } }
+		if (true) { while (false) { if (true) {} } }
+		return $val ? $val : "complexMethod";
+	}
+	private function foreachMethod($array) {
 		foreach($array as $val) {
 			if ($val === 3) {
 				if (true) {
@@ -21,8 +27,5 @@ class Hoge {
 				}
 			}
 		}
-		if (true) { while (false) { if (true) {} } }
-		if (true) { while (false) { if (true) {} } }
-		return "complexMethod";
 	}
 }
