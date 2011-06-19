@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<project name="jenkins_test" basedir="." default="all">
+<project name="ci_workshop" basedir="." default="all">
 
-  <property name="outputDir" value=".."/>
+  <property name="outputDir" value="."/>
 
   <target name="phpcpd">
     <phpcpd minTokens="10">
@@ -9,7 +9,7 @@
           <include name="**/**/*.php"/>
       </fileset>
       <formatter type="pmd"
-                 outfile="cpd.xml"/>
+                 outfile="${outputDir}/cpd.xml"/>
     </phpcpd>
   </target>
 
@@ -19,38 +19,25 @@
         <exclude name="exclude.php"/>
       </fileset>
       <formatter type="xml"
-                 outfile="pmd.xml"/>
+                 outfile="${outputDir}/pmd.xml"/>
     </phpmd>
   </target>
 
  <target name="phpunit">
-   <mkdir dir="clover" />
-   <coverage-setup database="${outputDir}/coverage.db">
-        <fileset dir="./phpfiles/">
-           <exclude name="**/*Test.php"/>
-       </fileset>
-    </coverage-setup>
-
-   <phpunit codecoverage="true">
-     <formatter type="xml" outfile="phpunit.xml"/>
-     <formatter type="clover" outfile="clover.xml"/>
+   <phpunit>
+     <formatter type="xml" outfile="${outputDir}/phpunit.xml"/>
      <batchtest>
        <fileset dir="./phpfiles/">
          <include name="**/*Test.php"/>
        </fileset>
      </batchtest>
    </phpunit>
-
-   <coverage-report outfile="clover.xml">
-     <report todir="clover" />
-   </coverage-report>
-
  </target>
 
   <target name="phpdoc">
     <mkdir dir="phpdoc" />
     <phpdoc title="API Documentation"
-            destdir="${outputDir}/phpdoc"
+            destdir="./phpdoc"
             output="HTML:Smarty:PHP">
       <fileset dir="./phpfiles">
       </fileset>

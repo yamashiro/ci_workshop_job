@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="ci_workshop" basedir="." default="all">
 
-  <property name="outputDir" value=".."/>
+  <property name="outputDir" value="."/>
 
   <target name="phpcpd">
     <phpcpd minTokens="10">
@@ -9,7 +9,7 @@
           <include name="**/**/*.php"/>
       </fileset>
       <formatter type="pmd"
-                 outfile="cpd.xml"/>
+                 outfile="${outputDir}/cpd.xml"/>
     </phpcpd>
   </target>
 
@@ -19,7 +19,7 @@
         <exclude name="exclude.php"/>
       </fileset>
       <formatter type="xml"
-                 outfile="pmd.xml"/>
+                 outfile="${outputDir}/pmd.xml"/>
     </phpmd>
   </target>
 
@@ -32,7 +32,7 @@
     </coverage-setup>
 
    <phpunit codecoverage="true">
-     <formatter type="xml" outfile="phpunit.xml"/>
+     <formatter type="xml" outfile="${outputDir}/phpunit.xml"/>
      <formatter type="clover" outfile="clover.xml"/>
      <batchtest>
        <fileset dir="./phpfiles/">

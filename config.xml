@@ -75,26 +75,19 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <shouldDetectModules>false</shouldDetectModules>
-      <pattern></pattern>
-      <highThreshold>50</highThreshold>
-      <normalThreshold>25</normalThreshold>
+      <pattern>cpd*.xml</pattern>
+      <highThreshold>20</highThreshold>
+      <normalThreshold>10</normalThreshold>
     </hudson.plugins.dry.DryPublisher>
-    <org.jenkinsci.plugins.cloverphp.CloverPublisher>
-      <publishHtmlReport>false</publishHtmlReport>
-      <xmlLocation>clover.xml</xmlLocation>
-      <disableArchiving>false</disableArchiving>
-      <healthyTarget>
-        <methodCoverage>70</methodCoverage>
-        <statementCoverage>80</statementCoverage>
-      </healthyTarget>
-      <unhealthyTarget/>
-      <failingTarget/>
-    </org.jenkinsci.plugins.cloverphp.CloverPublisher>
     <hudson.tasks.junit.JUnitResultArchiver>
       <testResults>phpunit.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
     </hudson.tasks.junit.JUnitResultArchiver>
+    <hudson.tasks.JavadocArchiver>
+      <javadocDir>phpdoc</javadocDir>
+      <keepAll>false</keepAll>
+    </hudson.tasks.JavadocArchiver>
   </publishers>
   <buildWrappers/>
 </project>
