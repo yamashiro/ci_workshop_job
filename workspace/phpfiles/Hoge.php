@@ -6,18 +6,19 @@ class Hoge {
     } else if ($val === 2) {
       return "2";
     } else if ($val === 3) {
-      return "2";
+      return "3";
     } else if ($val === 4) {
-      return "2";
+      return "4";
     } else if ($val === 5) {
-      return "2";
+      return "5";
     } else if ($val === 6) {
-      return "2";
+      return "6";
     } else if ($val === 7) {
-      return "2";
+      return "7";
     } 
+    return "Hoge";
   }
-  function method($unuseParameter, $useParameter) {
+  function hasUnUsedParameterMethod($unuseParameter, $useParameter) {
     return $useParameter;
   }
 	
@@ -29,12 +30,14 @@ class Hoge {
 	    while(true) {
 	      if (true) {} 
 	      if (true) {}
+	      return $val;
 	    }
 	  }
 	}
       }
     }
-    if (true) { while (true) { if (true) {} } }
-    if (true) { while (true) { if (true) {} } } 
+    if (true) { while (false) { if (true) {} } }
+    if (true) { while (false) { if (true) {} } }
+    return "complexMethod"; 
   }
 }
