@@ -1,4 +1,7 @@
 .project
+lastStable
+lastSuccessful
+javadoc
 builds
 coverage.db
 nextBuildNumber
