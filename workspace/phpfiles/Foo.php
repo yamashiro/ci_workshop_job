@@ -1,32 +1,30 @@
 <?php
 /**
- * このクラスはテスト用のクソコードです。こんなんじゃモテないぞ☆
+ * This file is to use workshop, then this code is not mote.
  * @author yamashiro
  *
  */
 class Foo {
-	function thisIsCopyAndPastePrograming() {
-			if (true) {
-			echo 1;
-		} else if (true) {
-			echo 2;
-		} else if (true) {
-			echo 3;
-		} else if (true) {
-			echo 4;
-		} else if (true) {
-			echo 5;
-		} else if (true) {
-			echo 6;
-		} else if (true) {
-			echo 7;
-		} else if (true) {
-			echo 8;
-		} else if (true) {
-			echo 9;
-		} else if (true) {
-			echo 10;
-		} 
+	function thisIsCopyAndPastePrograming($val) {
+		$val = $val + 1;
+		
+		if ($val === 1) {
+			return "1";
+		} else if ($val === 2) {
+			return "2";
+		} else if ($val === 3) {
+			return "3";
+		} else if ($val === 4) {
+			return "4";
+		} else if ($val === 5) {
+			return "5";
+		} else if ($val === 6) {
+			return "6";
+		} else if ($val === 7) {
+			return "7";
+		}
+		
+		return "Foo";
 	}
 	
 	function plus($a, $b) { 

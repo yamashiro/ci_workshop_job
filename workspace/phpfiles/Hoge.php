@@ -1,45 +1,40 @@
 <?php
 class Hoge {
-	function thisIsCopyAndPastePrograming() {
-		if (true) {
-			echo 1;
-		} else if (true) {
-			echo 2;
-		} else if (true) {
-			echo 3;
-		} else if (true) {
-			echo 4;
-		} else if (true) {
-			echo 5;
-		} else if (true) {
-			echo 6;
-		} else if (true) {
-			echo 7;
-		} else if (true) {
-			echo 8;
-		} else if (true) {
-			echo 9;
-		} else if (true) {
-			echo 10; 
+	function thisIsCopyAndPastePrograming($val) {
+		if ($val === 1) {
+			return "1";
+		} else if ($val === 2) {
+			return "2";
+		} else if ($val === 3) {
+			return "3";
+		} else if ($val === 4) {
+			return "4";
+		} else if ($val === 5) {
+			return "5";
+		} else if ($val === 6) {
+			return "6";
+		} else if ($val === 7) {
+			return "7";
 		}
-	} 
-	
-	function method($unuseParameter, $useParameter) {
-		echo $useParameter;
+
+		return "Hoge";
 	}
-	
-	function complexMethod($hoge) {
-		if (true) {
-			if (true) {
+	function hasUnUsedParameterMethod($unuseParameter, $useParameter) {
+		return $useParameter;
+	}
+
+	function complexMethod($array) {
+		foreach($array as $val) {
+			if ($val === 3) {
 				if (true) {
-					while(true) {
-						if (true) {} 
-						if (true) {}
-					}
+					if (true) {}
+					if (true) {}
+					return $val;
 				}
 			}
 		}
-		if (true) { while (true) { if (true) {} } }
-		if (true) { while (true) { if (true) {} } } 
+		if (true) { while (false) { if (true) {} } }
+		if (true) { while (false) { if (true) {} } }
+		return "complexMethod";
 	}
 }
