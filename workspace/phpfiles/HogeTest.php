@@ -19,7 +19,7 @@ class HogeTest extends PHPUnit_Framework_TestCase
 	
 	/** @test */
 	public function hasUnUsedParameterMethod() {
-		$this->assertSame("Used", $this->hoge->hasUnUsedParameterMethod("UnUsed", "Used"));
+		$this->assertSame("Used", $this->hoge->hasUnUsedParameterMethod("Used"));
 	}
 	
 	/** @test */

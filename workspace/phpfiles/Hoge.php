@@ -7,7 +7,7 @@ class Hoge {
 		return $val ? $val : "Hoge"; 
 	}
 	
-	function hasUnUsedParameterMethod($unuseParameter, $useParameter) {
+	function hasUnUsedParameterMethod($useParameter) {
 		return $useParameter;
 	}
 
