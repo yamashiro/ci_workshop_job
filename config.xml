@@ -17,6 +17,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.plugins.phing.PhingBuilder>
+      <buildFile>coverage_build.xml</buildFile>
       <properties>pmdformat=xml</properties>
     </hudson.plugins.phing.PhingBuilder>
   </builders>
@@ -81,6 +82,17 @@
       <highThreshold>20</highThreshold>
       <normalThreshold>10</normalThreshold>
     </hudson.plugins.dry.DryPublisher>
+    <hudson.plugins.clover.CloverPublisher>
+      <cloverReportDir>clover</cloverReportDir>
+      <cloverReportFileName>clover.xml</cloverReportFileName>
+      <healthyTarget>
+        <methodCoverage>70</methodCoverage>
+        <conditionalCoverage>80</conditionalCoverage>
+        <statementCoverage>80</statementCoverage>
+      </healthyTarget>
+      <unhealthyTarget/>
+      <failingTarget/>
+    </hudson.plugins.clover.CloverPublisher>
     <hudson.tasks.junit.JUnitResultArchiver>
       <testResults>phpunit.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
