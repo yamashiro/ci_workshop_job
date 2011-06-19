@@ -1,4 +1,8 @@
 <?php
+/**
+ * @SuppressWarnings(PHPMD.TooManyMethods)
+ *
+ */
 class CommonUtil {
   function hoge1() {}
   function hoge2() {}
